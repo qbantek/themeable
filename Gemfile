@@ -30,4 +30,6 @@ end
 group :production do
   gem 'puma'
   gem 'rails_12factor'
+  #noinspection SpellCheckingInspection
+  gem 'newrelic_rpm'
 end
