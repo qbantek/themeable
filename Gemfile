@@ -28,6 +28,7 @@ group :development, :test do
 end
 
 group :production do
+  # web server
   gem 'puma'
   gem 'rails_12factor'
   #noinspection SpellCheckingInspection
