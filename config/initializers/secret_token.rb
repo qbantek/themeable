@@ -8,7 +8,6 @@
 #noinspection SpellCheckingInspection
 require 'securerandom'
 
-
 def get_secret_token
   token_file = Rails.root.join('.secret')
 
@@ -26,6 +25,5 @@ end
 def secret_token
   ENV['SECRET_TOKEN'].blank? ? get_secret_token : ENV['SECRET_TOKEN']
 end
-
 
 Themeable::Application.config.secret_token = secret_token
