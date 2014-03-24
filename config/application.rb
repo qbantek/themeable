@@ -59,7 +59,7 @@ module Themeable
     config.assets.initialize_on_precompile = false
 
     # vendor libraries (BootStrap, etc)
-    config.assets.paths << "#{Rails.root}/vendor/assets/libs"
+    config.assets.paths << "#{Rails.root}/vendor/assets"
 
     # setting the stylesheet engine
     config.app_generators.stylesheet_engine :less
