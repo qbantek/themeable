@@ -6,6 +6,7 @@ gem 'rails', '3.2.17'
 
 
 gem 'jquery-rails'
+gem 'themes_for_rails', '~> 0.5.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,7 +16,6 @@ group :assets do
   gem 'less-rails'
   gem 'uglifier', '>= 1.0.3'
 end
-
 
 group :development do
   gem 'binding_of_caller'
