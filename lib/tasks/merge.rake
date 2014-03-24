@@ -1,7 +1,7 @@
 desc 'Merge local develop branch into master'
 
 #noinspection SpellCheckingInspection
-task :devtomaster => [:checkout_master, :merge_dev_into_master, :checkout_dev]
+task :merge => [:checkout_master, :merge_dev_into_master, :checkout_dev]
 
 task :checkout_master do
   `git checkout master`
