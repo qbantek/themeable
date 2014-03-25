@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>Themeable - Powerwallet</title>
-  <%= stylesheet_link_tag    'application', :media => 'all' %>
+  <%= theme_stylesheet_link_tag ('application'), media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1><%= ENV['THEME'] %></h1>
+<h1>powerwallet</h1>
 <%= yield %>
-<%= javascript_include_tag 'application' %>
+<%= theme_javascript_include_tag('application') %>
 </body>
 </html>
