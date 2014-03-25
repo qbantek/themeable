@@ -2,7 +2,7 @@
 #
 # Set the application theme from ad hoc environment variable
 
-private
+
 def default_theme_for_non_production_environment
 
   if Rails.env.production?
@@ -15,7 +15,7 @@ def default_theme_for_non_production_environment
 
 end
 
-def get_theme
+def current_theme
 
   if ENV['THEME'].blank?
     theme = default_theme_for_non_production_environment
@@ -29,4 +29,4 @@ def get_theme
 end
 
 
-Themeable::Application.config.theme = get_theme
+Themeable::Application.config.theme = current_theme
