@@ -6,8 +6,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <h>Theme Layout</h>
+  <h>Theme Layout :: Theme <%= ENV['THEME'] %></h>
   <%= content_for?(:main) ? yield(:main) : yield %>
-
 </body>
 </html>
