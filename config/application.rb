@@ -66,5 +66,7 @@ module Themeable
 
     # setting the stylesheet engine
     config.app_generators.stylesheet_engine :less
+
+    Themeable::Application.config.theme = 'powerwallet'
   end
 end

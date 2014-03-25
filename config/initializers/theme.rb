@@ -9,9 +9,9 @@ def default_theme_for_non_production_environment
     raise('Invalid theme. Please set environment variable.')
   end
 
-  Rails.logger.info 'Not on production environment => using default theme.'
+  Rails.logger.info 'initializers:default_theme_for_non_production_environment :: Not on production environment => using default theme.'
 
-  ENV['THEME'] = 'powerwallet'
+  Themeable::Application.config.default_theme
 
 end
 
@@ -23,7 +23,7 @@ def get_theme
     theme = ENV['THEME']
   end
 
-  Rails.logger.info "Using [#{theme}] theme."
+  Rails.logger.info "initializers:theme :: Using [#{theme}] theme."
 
   theme
 end
