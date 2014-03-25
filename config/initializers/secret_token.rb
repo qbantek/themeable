@@ -15,6 +15,10 @@ def generate_secret_token(token_file)
 end
 
 def load_secret_token
+  if Rails.env.production?
+    raise('Invalid secret token. Please set environment variable.')
+  end
+
   token_file = Rails.root.join('.secret')
   File.exist?(token_file) ? File.read(token_file).chomp : generate_secret_token(token_file)
 end
