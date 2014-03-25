@@ -6,8 +6,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>powerwallet</h1>
-<%= yield %>
-<%= theme_javascript_include_tag('application') %>
+    <h>Theme Layout</h>
+  <%= content_for?(:main) ? yield(:main) : yield %>
+
 </body>
 </html>

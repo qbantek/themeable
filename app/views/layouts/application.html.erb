@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Themeable - Powerwallet</title>
+  <%= theme_stylesheet_link_tag ('application'), media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <h1>Global Layout</h1>
+  <%= yield :header %>
+</header>
+<main id="main" role="main">
+  <%= content_for?(:main) ? yield(:main) : yield %>
+</main>
+<footer>
+  <%= yield :footer %>
+</footer>
+<%= javascript_include_tag 'application' %>
+<%= yield :javascripts %>
+</body>
+</html>
