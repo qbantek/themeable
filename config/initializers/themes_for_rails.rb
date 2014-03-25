@@ -3,10 +3,10 @@ ThemesForRails.config do |config|
   config.themes_dir = ':root/app/assets/themes'
 
   # assets_dir is the path to your theme assets.
-  config.assets_dir = ':root/app/themes/:name'
+  config.assets_dir = ':root/app/assets/themes/:name'
 
   # views_dir is the path to your theme views
-  config.views_dir = ':root/app/assets/themes/:name/views'
+  config.views_dir = ':root/app/views/themes/:name'
 
   # themes_routes_dir is the asset pipeline route base.
   # Because of the way the asset pipeline resolves paths, you do
