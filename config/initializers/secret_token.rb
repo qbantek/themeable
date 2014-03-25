@@ -8,22 +8,19 @@
 #noinspection SpellCheckingInspection
 require 'securerandom'
 
-def get_secret_token
-  token_file = Rails.root.join('.secret')
-
-  if File.exist?(token_file)
-    token = File.read(token_file).chomp
-  else
-    token = SecureRandom.hex(64)
-    File.write(token_file, token)
-  end
-
+def generate_secret_token(token_file)
+  token = SecureRandom.hex(64)
+  File.write(token_file, token)
   token
 end
 
+def load_secret_token
+  token_file = Rails.root.join('.secret')
+  File.exist?(token_file) ? File.read(token_file).chomp : generate_secret_token(token_file)
+end
 
 def secret_token
-  ENV['SECRET_TOKEN'].blank? ? get_secret_token : ENV['SECRET_TOKEN']
+  ENV['SECRET_TOKEN'].blank? ? load_secret_token : ENV['SECRET_TOKEN']
 end
 
 Themeable::Application.config.secret_token = secret_token

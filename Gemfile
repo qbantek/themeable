@@ -5,7 +5,6 @@ ruby '2.0.0'
 gem 'rails', '3.2.17'
 gem 'jquery-rails'
 gem 'themes_for_rails', '~> 0.5.1'
-gem 'puma'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,6 +27,7 @@ end
 
 group :production do
   # web server
+  gem 'puma'
   gem 'rails_12factor'
   #noinspection SpellCheckingInspection
   gem 'newrelic_rpm'

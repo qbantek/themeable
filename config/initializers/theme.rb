@@ -1,32 +1,30 @@
 # Be sure to restart your server when you modify this file.
 #
-# Set the application theme from ad hoc environment variable
+# Set the application theme from an environment variable
 
 
 def default_theme_for_non_production_environment
-
   if Rails.env.production?
-    raise('Invalid theme. Please set environment variable.')
+    raise('Invalid current theme. Please set environment variable.')
   end
 
-  Rails.logger.info 'initializers:default_theme_for_non_production_environment :: Not on production environment => using default theme.'
+  default_theme = 'powerwallet'
 
-  Themeable::Application.config.default_theme
+  Rails.logger.info "initializers:default_theme_for_non_production_environment :: Using DEFAULT theme [#{default_theme}]."
 
+  Themeable::Application.config.theme = default_theme
 end
 
 def current_theme
-
   if ENV['THEME'].blank?
     theme = default_theme_for_non_production_environment
   else
     theme = ENV['THEME']
   end
 
-  Rails.logger.info "initializers:theme :: Using [#{theme}] theme."
+  Rails.logger.info "initializers:current_theme :: Using [#{theme}] theme."
 
   theme
 end
-
 
 Themeable::Application.config.theme = current_theme
