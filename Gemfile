@@ -4,7 +4,6 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.17'
 
-
 gem 'jquery-rails'
 gem 'themes_for_rails', '~> 0.5.1'
 
