@@ -27,4 +27,7 @@ Themeable::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # default theme for development
+  Themeable::Application.config.theme = 'powerwallet'
 end
