@@ -1,0 +1,13 @@
+/workers
+/spec
+/tests
+/docs
+/tasks
+
+.gitkeep
+.secret
+.env
+prod.env
+
+README.MD
+README.rdoc
