@@ -23,6 +23,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.1'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 group :production do
